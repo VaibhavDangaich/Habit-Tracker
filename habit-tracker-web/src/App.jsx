@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { Route,Routes } from 'react-router-dom';
 import './App.css'
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import SignInPage from './auth/sign-in/index.jsx';
 
-function App() {
- 
-
+export default function App() {
   return (
-    <div>
-     
-    </div>
-  )
+   <div>
+    <Routes>
+      <Route path='/auth/sign-in' element={<SignInPage />} />
+    </Routes>
+   </div>
+  );
 }
 
-export default App
+
